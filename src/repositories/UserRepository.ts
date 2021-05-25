@@ -27,4 +27,8 @@ export class UserRepository extends Repository<UserModel> {
         });
         return mobileExist.length > 0;
     }
+
+    async getUserByUUID(uuid: string): Promise<UserModel | undefined> {
+        return this.createQueryBuilder('users').where('users.uuid = :uuid', { uuid }).getOne();
+    }
 }

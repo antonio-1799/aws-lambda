@@ -39,12 +39,18 @@ const responses = {
         schema: 'Response409',
         examples: {
             EMAIL_EXIST: {
-                code: 409,
-                message: 'Email already exist',
+                description: 'Email duplicate',
+                value: {
+                    code: 409,
+                    message: 'Email already exist',
+                },
             },
             MOBILE_EXIST: {
-                code: 409,
-                message: 'Mobile already exist',
+                description: 'Mobile duplicate',
+                value: {
+                    code: 409,
+                    message: 'Mobile already exist',
+                },
             },
         },
     },

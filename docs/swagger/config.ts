@@ -6,7 +6,7 @@ const OPENAPI = '3.0.0';
 const PROJECT_INFO = {
     description: '',
     version: '1.0.0',
-    title: 'ProjectName',
+    title: 'User Service',
     contact: {
         email: 'example@example.com',
     },

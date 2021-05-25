@@ -65,6 +65,7 @@ test('200: SUCCESS', async () => {
     expect(response).toHaveProperty('user.name');
     expect(response).toHaveProperty('user.email');
     expect(response).toHaveProperty('user.mobile');
+    expect(response).toHaveProperty('token');
 
     expect(result.statusCode).toBe(200);
     expect(response.code).toBe(200);

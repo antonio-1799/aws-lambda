@@ -27,4 +27,18 @@ export class UserModel extends Model {
         type: 'text',
     })
     public password: string;
+
+    @Column({
+        type: 'datetime',
+        nullable: true,
+        default: null,
+    })
+    public emailVerifiedAt: string | null;
+
+    @Column({
+        type: 'datetime',
+        nullable: true,
+        default: null,
+    })
+    public mobileVerifiedAt: string | null;
 }

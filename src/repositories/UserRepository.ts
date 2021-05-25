@@ -9,4 +9,22 @@ export class UserRepository extends Repository<UserModel> {
             .orWhere('users.mobile = :username', { username })
             .getOne();
     }
+
+    async checkUserEmail(email: string): Promise<boolean> {
+        const emailExist = await this.find({
+            where: {
+                email,
+            },
+        });
+        return emailExist.length > 0;
+    }
+
+    async checkUserMobile(mobile: string): Promise<boolean> {
+        const mobileExist = await this.find({
+            where: {
+                mobile,
+            },
+        });
+        return mobileExist.length > 0;
+    }
 }

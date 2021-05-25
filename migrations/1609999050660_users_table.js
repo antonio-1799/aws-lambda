@@ -9,6 +9,8 @@ const up =
     '  `created_at` DATETIME NOT NULL DEFAULT NOW(),  ' +
     '  `updated_at` DATETIME NOT NULL DEFAULT NOW(), ' +
     '  `deleted_at` DATETIME NULL, ' +
+    '  `emailVerifiedAt` DATETIME NULL, ' +
+    '  `mobileVerifiedAt` DATETIME NULL, ' +
     '  PRIMARY KEY (`id`), ' +
     '  UNIQUE INDEX `email` (`email` ASC), ' +
     '  UNIQUE INDEX `mobile` (`mobile` ASC), ' +
@@ -19,4 +21,4 @@ const down = 'DROP TABLE `users`;';
 module.exports = {
     up,
     down,
-}
+};
